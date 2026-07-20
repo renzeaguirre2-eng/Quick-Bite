@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QuickBite | Campus Food Delivery</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+🍔 QuickBite
+</div>
+
+<div class="nav-right">
+
+<input
+type="text"
+id="search"
+placeholder="Search food...">
+
+<button id="darkBtn">
+<i class="fa-solid fa-moon"></i>
+</button>
+
+<div class="cartIcon">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span id="cartCount">0</span>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="heroText">
+
+<h1>Hungry?</h1>
+
+<p>Order delicious meals around campus in seconds.</p>
+
+<button onclick="scrollFoods()">
+Order Now
+</button>
+
+</div>
+
+</section>
+
+<!-- CATEGORY -->
+
+<section class="categories">
+
+<button class="active">All</button>
+<button>Burgers</button>
+<button>Chicken</button>
+<button>Pizza</button>
+<button>Drinks</button>
+<button>Dessert</button>
+
+</section>
+
+<!-- FOOD SECTION -->
+
+<section class="foods" id="foods">
+
+<div class="food-card"
+data-name="Burger">
+
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500">
+
+<h3>Classic Burger</h3>
+
+<p>Juicy beef burger with fries.</p>
+
+<div class="bottom">
+
+<span>₱120</span>
+
+<button onclick="addToCart('Classic Burger',120)">
+Add
+</button>
+
+</div>
+
+</div>
+
+<div class="food-card"
+data-name="Chicken">
+
+<img src="https://images.unsplash.com/photo-1604908176997-4311f31c2f40?w=500">
+
+<h3>Chicken Rice</h3>
+
+<p>Crispy fried chicken with rice.</p>
+
+<div class="bottom">
+
+<span>₱95</span>
+
+<button onclick="addToCart('Chicken Rice',95)">
+Add
+</button>
+
+</div>
+
+</div>
+
+<div class="food-card"
+data-name="Pizza">
+
+<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500">
+
+<h3>Pizza Slice</h3>
+
+<p>Cheesy pepperoni pizza.</p>
+
+<div class="bottom">
+
+<span>₱85</span>
+
+<button onclick="addToCart('Pizza Slice',85)">
+Add
+</button>
+
+</div>
+
+</div>
+
+<div class="food-card"
+data-name="Drinks">
+
+<img src="https://images.unsplash.com/photo-1558857563-b371033873b8?w=500">
+
+<h3>Milk Tea</h3>
+
+<p>Brown sugar milk tea.</p>
+
+<div class="bottom">
+
+<span>₱70</span>
+
+<button onclick="addToCart('Milk Tea',70)">
+Add
+</button>
+
+</div>
+
+</div>
+
+<div class="food-card"
+data-name="Dessert">
+
+<img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500">
+
+<h3>Chocolate Cake</h3>
+
+<p>Rich chocolate cake.</p>
+
+<div class="bottom">
+
+<span>₱90</span>
+
+<button onclick="addToCart('Chocolate Cake',90)">
+Add
+</button>
+
+</div>
+
+</div>
+
+<div class="food-card"
+data-name="Burgers">
+
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=500">
+
+<h3>Double Burger</h3>
+
+<p>Double beef & cheese.</p>
+
+<div class="bottom">
+
+<span>₱160</span>
+
+<button onclick="addToCart('Double Burger',160)">
+Add
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CART -->
+
+<div class="cart">
+
+<h2>Your Cart</h2>
+
+<ul id="cartItems"></ul>
+
+<h3>Total: ₱<span id="total">0</span></h3>
+
+<button id="orderBtn"
+onclick="placeOrder()">
+
+Place Order
+
+</button>
+
+</div>
+
+<footer>
+
+<p>QuickBite © 2026</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
